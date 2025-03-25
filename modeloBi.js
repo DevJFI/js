@@ -3,5 +3,5 @@ function ExibeBI(link){
   var divBI = $('#BI')
   alert(html)
   divBI.innerHtml = html
-  
+  return html
 }
