@@ -3,4 +3,5 @@ function ExibeBI(link){
   var divBI = document.getElementById('BI')
   alert(html)
   divBI.innerHtml = html
+  
 }
