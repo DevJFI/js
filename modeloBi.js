@@ -22,9 +22,9 @@ function ExibeBI(link){
 '<div class="main"><iframe allowfullscreen="true" frameborder="0" height="373.5" src="'+link+'"></iframe><img alt="" data-units="px" id="imgpos" src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmQofLcpxnwsEZz9GeGoG7fOWMIq8hW69wbB7XVscYFdNCeNeB0TkbmAkwSPIwNur2dT-ecexTk=w1366-h625" /></div>'+
 '</body>'+
 '</html>'
-  var classeDocumento =  document.getElementsByClassName('WCMHtmlEditor')
-  var divExibicao = classeDocumento[0].id
-  alert(divExibicao)
+  /*var classeDocumento =  document.getElementsByClassName('WCMHtmlEditor')
+  var divExibicao = classeDocumento[0].id*/
+  var divBI = document.getElementById('BI')
   alert(html)
-  divExibicao.innerHtml = html
+  divBI.innerHtml = html
 }
