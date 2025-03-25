@@ -24,5 +24,7 @@ function ExibeBI(link){
 '</html>'
   var classeDocumento =  document.getElementsByClassName('WCMHtmlEditor')
   var divExibicao = classeDocumento[0].id
+  alert(divExibicao)
+  alert(html)
   divExibicao.innerHtml = html
 }
