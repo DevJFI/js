@@ -1,0 +1,64 @@
+body {
+background-color: #f7f7f7;
+}
+.Card_JFI {
+width: 100% !important;
+height: 250px !important;
+border-radius: 8px !important;
+font-family: 'Istok Web', sans-serif !important;
+background-image: url(https://fluig.jfi.com.br/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD01MTIyMjYmdmVyPTEwMDAmZmlsZT1CYW5jb0hvcmFzLnBuZyZjcmM9Mzc0ODU2NTEwJnNpemU9MC4wMjA4MTcmdUlkPTMxMSZmU0lkPTEmdVNJZD0xJmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZSZhdHRhY2g9ZmFsc2U=.png) !important;
+background-size: cover !important;
+background-position: center !important;
+background-repeat: no-repeat !important;
+display: flex !important;
+justify-content: right !important;
+align-items: end !important;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+border-radius: 8px;
+}
+.Bold_JFI {
+font-family: 'Istok Web', sans-serif !important;
+} 
+.Highlight_JFI {
+color: #00a388 !important;
+font-weight: bold !important;
+font-size: 18px !important;
+font-family: 'Istok Web', sans-serif !important;
+} 
+.Info_JFI {
+display: flex !important;
+flex-direction: column !important;
+align-items: center !important;
+text-align: center !important;
+margin-right: 15px !important;
+} 
+h3 {
+margin: 0 !important;
+font-size: 16px !important;
+color: #666 !important;
+font-family: 'Istok Web', sans-serif !important;
+margin-bottom: 10px !important;
+} 
+.Info_JFI h2 {
+color: #00a388 !important;
+margin: 0 !important;
+font-family: 'ADLaM Display', sans-serif !important;
+font-weight: 400 !important;
+font-size: 30px !important;
+} 
+#slider-container{
+position: relative;
+width: 100%;
+overflow: hidden;
+max-height: 250px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+border-radius: 8px;
+} 
+#visualizacaoPagina{
+background-color: #ffffff00 !important;
+} 
+.Info_JFI p {
+margin: 5px 0 !important;
+font-size: 14px !important;
+} ;
+
