@@ -759,8 +759,7 @@ var tdizoom = (function () {
 						}
 						return fields;
 					}
-                    var campo = $("#" + type).val()
-                    if(campo.length>=3){
+
                         var urlrequest = function () {
                             var request = "/ecm/api/rest/ecm/dataset/",
                                 json = {};
@@ -808,7 +807,7 @@ var tdizoom = (function () {
     
                             return request += "?json=" + encodeURIComponent(JSON.stringify(json));
                         };
-                    }
+                    
 					
 
 					var searchtable = function (text) {
