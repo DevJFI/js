@@ -1,31 +1,4 @@
 
-// Full
-
-/*
-FLUIGJFI v4.1
-REGRAS DE DOCUMENTAÇÃO
-- Sempre utilizar o seguinte modelo:
-
-     * Função nomeDaFuncao
-     * @description Incluir uma descrição suficiente para que o programador consiga entender claramente qual é a finalidade da função sem precisar ter acesso ao código fonte
-	 * @memberof Especificar o "pai" da função. Ex.: TABLE
-	 * @example Exemplo funcional de como utilizar a função. Ex.: FLUIGJFI.writeForState();
-	 * @example Lista de tags, separadas por vírgula. A tag com o nome da função pai é obrigatória. Ex.: table, teste, teste1, teste2, teste3
-	 * @example Caso exista alguma imagem para exemplificar o uso, ela pode ser informada aqui. Caso não haja, deixar o @example em branco Ex.: 
-	 * @author Nome do criador da função 
-	 
-Caso a função tenha uma nova versão com um novo nome e/ou esteja descontinuada apontar como deprecated e indicar o nome da nova função
-	 * @deprecated nomeDaNovaFuncao
-
-
-Caso existam parâmetros, informe o tipo de cada parâmetro (ex.: {int} ou {*}, para any). Em seguida, informe o nome do parâmetro e a descrição do mesmo
-
-     * @param {*} conditional Variável a ser verificada
-
-Caso exista retorno, informe o tipo (ex.: {int} ou {*}, para any). Em seguida, informe a descrição do mesmo
-	 * @returns {boolean}  True | False
- */
-
 FLUIGJFI = new FLUIGJFI(); 
 
 function FLUIGJFI(){
