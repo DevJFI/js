@@ -504,22 +504,6 @@ function GeraTabela2() {
 // --------------------------- 31 - 03 - 2025 ----------------------------
 // -----------------------------------------------------------------------
 
-// Definindo a função wrapper
-function chamarRetornoDatasetComSubNome(valor) {
-        console.log("chamarRetornoDatasetComSubNome executado.");
-    try {
-        const dataset = RetornoDataset("SUB_NOME", valor);
-        console.log("Dataset retornado:", dataset);
-        return dataset;
-    } catch (e) {
-        console.error("Erro ao chamar RetornoDataset: " + e.message);
-        return null;
-    }
-}
-
-// Chamando a função com um valor de exemplo
-atualizarSelectComDadosDataset();
-
 function atualizarSelectComDadosDataset() {
     var UsuarioLogado = WCMAPI.userCode;
     // Chama a função para obter os dados do dataset
@@ -552,8 +536,9 @@ function atualizarSelectComDadosDataset() {
     console.log("Select atualizado com sucesso");
 }
 
-// Função auxiliar que você já tinha
+// Definindo a função wrapper
 function chamarRetornoDatasetComSubNome(valor) {
+        console.log("chamarRetornoDatasetComSubNome executado.");
     try {
         const dataset = RetornoDataset("SUB_NOME", valor);
         console.log("Dataset retornado:", dataset);
