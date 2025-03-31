@@ -525,7 +525,13 @@ function atualizarSelectComDadosDataset() {
     // Limpa as opções existentes
     selectElement.innerHTML = '';
 
-    // Adiciona as novas opções baseadas no dataset
+    // Adiciona a primeira opção vazia
+    const emptyOption = document.createElement('option');
+    emptyOption.value = ''; // Valor vazio
+    emptyOption.textContent = ''; // Texto vazio
+    selectElement.appendChild(emptyOption);
+
+    // Adiciona as demais opções baseadas no dataset
     dataset.values.forEach(item => {
         const option = document.createElement('option');
         option.value = item.CD_MATRICULA; // Usa a matrícula como value
