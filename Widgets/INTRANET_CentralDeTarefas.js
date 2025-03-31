@@ -505,3 +505,19 @@ function GeraTabela2() {
     console.log("GeraTabela2 gerado e atualizarSelectAtendente atualizado")
 }
 
+// 31 - 03 - 2025
+
+// Definindo a função wrapper
+function chamarRetornoDatasetComSubNome(valor) {
+    try {
+        const dataset = RetornoDataset("SUB_NOME", valor);
+        console.log("Dataset retornado:", dataset);
+        return dataset;
+    } catch (e) {
+        console.error("Erro ao chamar RetornoDataset: " + e.message);
+        return null;
+    }
+}
+
+// Chamando a função com um valor de exemplo
+chamarRetornoDatasetComSubNome('18def154-b946-45f7-8c3c-06e40a2b2a2f');
