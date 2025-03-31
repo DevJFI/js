@@ -500,7 +500,9 @@ function GeraTabela2() {
     });
 }
 
-// 31 - 03 - 2025
+// -----------------------------------------------------------------------
+// --------------------------- 31 - 03 - 2025 ----------------------------
+// -----------------------------------------------------------------------
 
 // Definindo a função wrapper
 function chamarRetornoDatasetComSubNome(valor) {
@@ -516,4 +518,51 @@ function chamarRetornoDatasetComSubNome(valor) {
 }
 
 // Chamando a função com um valor de exemplo
-chamarRetornoDatasetComSubNome('18def154-b946-45f7-8c3c-06e40a2b2a2f');
+atualizarSelectComDadosDataset();
+
+function atualizarSelectComDadosDataset() {
+    var UsuarioLogado = WCMAPI.userCode;
+    // Chama a função para obter os dados do dataset
+    const dataset = chamarRetornoDatasetComSubNome(UsuarioLogado);
+    
+    if (!dataset || dataset.values.length === 0) {
+        console.log("Nenhum dado encontrado no dataset");
+        return;
+    }
+
+    // Obtém o elemento select (ajuste o seletor conforme necessário)
+    const selectElement = document.querySelector('select[style="background-color: transparent; border: 0px;"]');
+    
+    if (!selectElement) {
+        console.error("Elemento select não encontrado");
+        return;
+    }
+
+    // Limpa as opções existentes
+    selectElement.innerHTML = '';
+
+    // Adiciona as novas opções baseadas no dataset
+    dataset.values.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.CD_MATRICULA; // Usa a matrícula como value
+        option.textContent = item.NOME;   // Usa o nome como texto exibido
+        selectElement.appendChild(option);
+    });
+
+    console.log("Select atualizado com sucesso");
+}
+
+// Função auxiliar que você já tinha
+function chamarRetornoDatasetComSubNome(valor) {
+    try {
+        const dataset = RetornoDataset("SUB_NOME", valor);
+        console.log("Dataset retornado:", dataset);
+        return dataset;
+    } catch (e) {
+        console.error("Erro ao chamar RetornoDataset: " + e.message);
+        return null;
+    }
+}
+
+// Chama a função para atualizar o select (pode ser chamada quando a página carrega ou em outro evento)
+atualizarSelectComDadosDataset();
