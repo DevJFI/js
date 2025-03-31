@@ -550,19 +550,3 @@ function chamarRetornoDatasetComSubNome(valor) {
 
 // Chama a função para atualizar o select
 atualizarSelectComDadosDataset();
-
-// Definindo a função wrapper
-function chamarRetornoDatasetComSubNome(valor) {
-        console.log("chamarRetornoDatasetComSubNome executado.");
-    try {
-        const dataset = RetornoDataset("SUB_NOME", valor);
-        console.log("Dataset retornado:", dataset);
-        return dataset;
-    } catch (e) {
-        console.error("Erro ao chamar RetornoDataset: " + e.message);
-        return null;
-    }
-}
-
-// Chama a função para atualizar o select (pode ser chamada quando a página carrega ou em outro evento)
-atualizarSelectComDadosDataset();
