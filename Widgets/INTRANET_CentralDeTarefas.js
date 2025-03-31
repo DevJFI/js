@@ -41,7 +41,6 @@ function zoomFiltro(obj) {
 // QUANDO A PÁGINA É CARREGADA PELA PRIMEIRA VEZ
 function Inicial(obj, valor) {  
     var UsuarioLogado = WCMAPI.userCode;
-    console.log(UsuarioLogado);
     var img = document.getElementById('userImage');
     img.src = "https://fluig.jfi.com.br/social/api/rest/social/image/" + UsuarioLogado;
 
@@ -438,17 +437,14 @@ $(document).ready(function () {
 atualizarTabela()
 
 function VerificaExisteTabela() {
-    console.log("VerificaExisteTabela")
     // Verifica se existe a tabela com o ID 'TabelaPrincipal' e se ela possui linhas
     var tabela = $('#TabelaPrincipal').DataTable();
     if (tabela && tabela.rows().count() > 0) {
         // Se a tabela existe e possui linhas, destrói a tabela
         tabela.destroy();
-        console.log("Tabela destruída.");
     } else {
         tabela.destroy();
-        // Se a tabela não existe ou não possui linhas, não faz nada
-        console.log("Destruida tbm, mas não há tabela para destruir.");
+        // Se a tabela não existe ou não possui linhas, não faz nada        
     }
 }
 
@@ -502,13 +498,13 @@ function GeraTabela2() {
             });
         }
     });
-    console.log("GeraTabela2 gerado e atualizarSelectAtendente atualizado")
 }
 
 // 31 - 03 - 2025
 
 // Definindo a função wrapper
 function chamarRetornoDatasetComSubNome(valor) {
+        console.log("chamarRetornoDatasetComSubNome executado.");
     try {
         const dataset = RetornoDataset("SUB_NOME", valor);
         console.log("Dataset retornado:", dataset);
