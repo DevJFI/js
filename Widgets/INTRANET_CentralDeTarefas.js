@@ -505,8 +505,8 @@ function GeraTabela2() {
 // -----------------------------------------------------------------------
 
 function atualizarSelectComDadosDataset() {
-    var UsuarioLogado = WCMAPI.userCode;
     // Chama a função para obter os dados do dataset
+    var UsuarioLogado = WCMAPI.userCode;
     const dataset = chamarRetornoDatasetComSubNome(UsuarioLogado);
     
     if (!dataset || dataset.values.length === 0) {
@@ -514,11 +514,11 @@ function atualizarSelectComDadosDataset() {
         return;
     }
 
-    // Obtém o elemento select (ajuste o seletor conforme necessário)
-    const selectElement = document.querySelector('select[style="background-color: transparent; border: 0px;"]');
+    // Obtém o elemento select pelo ID
+    const selectElement = document.getElementById('Substituto');
     
     if (!selectElement) {
-        console.error("Elemento select não encontrado");
+        console.error("Elemento select com ID 'Substituto' não encontrado");
         return;
     }
 
@@ -535,6 +535,21 @@ function atualizarSelectComDadosDataset() {
 
     console.log("Select atualizado com sucesso");
 }
+
+// Função auxiliar que você já tinha
+function chamarRetornoDatasetComSubNome(valor) {
+    try {
+        const dataset = RetornoDataset("SUB_NOME", valor);
+        console.log("Dataset retornado:", dataset);
+        return dataset;
+    } catch (e) {
+        console.error("Erro ao chamar RetornoDataset: " + e.message);
+        return null;
+    }
+}
+
+// Chama a função para atualizar o select
+atualizarSelectComDadosDataset();
 
 // Definindo a função wrapper
 function chamarRetornoDatasetComSubNome(valor) {
