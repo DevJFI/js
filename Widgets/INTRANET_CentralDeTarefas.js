@@ -547,6 +547,3 @@ function chamarRetornoDatasetComSubNome(valor) {
         return null;
     }
 }
-
-// Chama a função para atualizar o select
-atualizarSelectComDadosDataset();
