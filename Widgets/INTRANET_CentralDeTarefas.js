@@ -100,6 +100,9 @@ function Inicial(obj, valor) {
 
     ArmazenaParametros = "ResponsavelAberto('" + obj + "','" + valor + "')"; 
     GeraTabela2();
+    
+    var login = WCMAPI.getUserLogin()
+    console.log("login"+login)
 }
 
 // =========== FUNCOES EXTRAS ===============
